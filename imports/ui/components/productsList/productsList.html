@@ -1,6 +1,11 @@
+<product-add></product-add>
+
 <ul>
     <li ng-repeat="product in productsList.products">
-        {{product.name}}
+        <a ui-sref="productDetails({ productId: product._id })">
+            {{product.name}}
+        </a>
         <p>{{product.category}}</p>
+        <product-remove product="product"></product-remove> 
     </li>
 </ul>
