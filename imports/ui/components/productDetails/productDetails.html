@@ -1,1 +1,9 @@
-The product you selected is: {{ productDetails.productId }}
+The product you selected is: 
+
+<form>
+    Product name: <input type="text" ng-model="productDetails.product.name" />
+    Category: <input type="text" ng-model="productDetails.product.category" />
+    <button ng-click="productDetails.save()">Save</button>
+</form>
+
+<button ui-sref="products">Back</button>

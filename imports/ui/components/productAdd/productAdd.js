@@ -1,6 +1,8 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
  
+import { Meteor } from 'meteor/meteor';
+
 import template from './productAdd.html';
 import { Products } from '../../../api/products';
  
@@ -10,6 +12,7 @@ class ProductAdd {
     }
 
     submit() {
+        this.product.owner = Meteor.userId();
         Products.insert(this.product);
         this.reset();
     }
