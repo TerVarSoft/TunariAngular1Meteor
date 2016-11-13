@@ -1,0 +1,16 @@
+<md-dialog class="main-background" aria-label="New product">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Nuevo producto</h2>
+            <span flex></span>
+            <md-button ng-click="productAddModal.close()">
+                Cerrar
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div class="md-dialog-content">
+            <product-add done="productAddModal.close()"></product-add>
+        </div>
+    </md-dialog-content>
+</md-dialog>

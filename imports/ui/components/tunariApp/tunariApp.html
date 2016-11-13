@@ -1,8 +1,17 @@
-<login-buttons></login-buttons>
-
-<navigation></navigation>
-<h1>This is TunariApp!!</h1>
-<p>This is {{'cool' + '!'}}</p>
-
-<div ui-view=""></div>
-<!--<products-list></products-list>-->
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-tall" layout-align="center center">
+        <span>Tunari</span>
+    </md-toolbar>
+    <md-content class="main-background" layout="column" flex>
+        <md-list>
+            <md-list-item>
+                <md-icon md-svg-icon="action:ic_store_24px"></md-icon>
+                <p>Almacen</p>
+            </md-list-item>
+        </md-list>        
+    </md-content>
+</md-sidenav>
+<div layout="column" flex>
+    <navigation></navigation>
+    <md-content class="main-background" ui-view="" flex layout-padding></md-content>
+</div>

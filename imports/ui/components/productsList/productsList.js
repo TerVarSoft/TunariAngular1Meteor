@@ -5,6 +5,7 @@ import uiRouter from 'angular-ui-router';
 import template from './productsList.html'; 
 import { Products } from '../../../api/products';
 import { name as ProductAdd } from '../productAdd/productAdd';
+import { name as ProductAddButton } from '../productAddButton/productAddButton';
 import { name as ProductRemove } from '../productRemove/productRemove';
  
 class ProductsList {
@@ -27,6 +28,7 @@ export default angular.module(name, [
     angularMeteor,
     uiRouter,
     ProductAdd,
+    ProductAddButton,
     ProductRemove
 ]).component(name, {
     template,

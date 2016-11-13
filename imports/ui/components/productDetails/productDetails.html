@@ -1,9 +1,28 @@
-The product you selected is: 
-
-<form>
-    Product name: <input type="text" ng-model="productDetails.product.name" />
-    Category: <input type="text" ng-model="productDetails.product.category" />
-    <button ng-click="productDetails.save()">Save</button>
-</form>
-
-<button ui-sref="products">Back</button>
+<div flex layout="row">
+    <div flex="30">
+        <md-card>
+            <img ng-src="http://fullhdpictures.com/wp-content/uploads/2016/09/Gorgeous-Developer-Wallpaper.jpeg" class="md-card-image" alt="Washed Out"/>
+        </md-card>
+    </div>    
+    <div flex="70">
+        <form layout="column" layout-padding ng-submit="productDetails.save()">
+            <md-input-container>
+                <label>
+                    Nombre del producto
+                </label>
+                <input type="text" ng-model="productDetails.product.name"/>
+            </md-input-container>
+            <md-input-container>
+                <label>
+                    Categoria
+                </label>
+                <input type="text" ng-model="productDetails.product.category"/>
+            </md-input-container>     
+            <div flex layout="row">
+                <span flex></span>
+                <md-button ui-sref="products" class="md-accent md-raised">Cancelar</md-button>
+                <md-button type="submit" class="md-accent md-raised">Guardar</md-button>
+            </div>
+        </form>
+    </div>    
+</div> 

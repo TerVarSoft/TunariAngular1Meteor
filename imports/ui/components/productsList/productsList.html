@@ -1,11 +1,21 @@
-<product-add></product-add>
+<div layout="column" layout-padding>
 
-<ul>
-    <li ng-repeat="product in productsList.products">
-        <a ui-sref="productDetails({ productId: product._id })">
-            {{product.name}}
-        </a>
-        <p>{{product.category}}</p>
-        <product-remove product="product"></product-remove> 
-    </li>
-</ul>
+    <product-add-button></product-add-button>
+ 
+    <div layout="row" layout-wrap>
+        <div class="pointer" flex="50" flex-gt-md="25" ng-repeat="product in productsList.products"> 
+            <md-card ui-sref="productDetails({ productId: product._id })">
+                <img ng-src="http://fullhdpictures.com/wp-content/uploads/2016/09/Gorgeous-Developer-Wallpaper.jpeg" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">{{product.name}}</span>
+                        <span class="md-subhead">{{product.category}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <product-remove product="product"></product-remove>           
+                </md-card-actions>
+            </md-card>     
+        </div>   
+    </div>    
+</div>

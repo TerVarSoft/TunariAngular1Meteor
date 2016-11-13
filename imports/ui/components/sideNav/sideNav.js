@@ -1,9 +1,9 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
  
-import template from './navigation.html';
+import template from './sideNav.html';
  
-const name = 'navigation';
+const name = 'sideNav';
  
 export default angular.module(name, [
     angularMeteor
